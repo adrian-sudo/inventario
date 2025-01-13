@@ -1,0 +1,43 @@
+{%  extends '../index_master.html'%}
+{% block content %}
+
+    <!-- page content -->
+        <div class="right_col" role="main">
+
+            <br>
+            <br>
+
+          <h1>Lista de usuarios</h1>
+
+          <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Cargo</th>               
+              </tr>
+            </thead>
+            <tbody>
+            
+              {% for u in usuarios %}
+              <tr>
+                <th scope="row">{{ u.id}}</th>
+                <td>{{ u.nombre}}</td>
+                <td>{{ u.apellido}}</td>
+                <td>{{ u.correo}}</td>
+                <td>{{ u.cargo}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          
+            <caption>
+              Lista de usuarios
+            </caption>
+          
+          </table>
+
+        </div>
+        <!-- /page content -->
+{% endblock %}
